@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'xyplotter_ui'
+package_name = 'omnirevolve_ros2_ui'
 
 setup(
     name=package_name,
@@ -13,16 +13,16 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    author='Your Name',
-    author_email='you@example.com',
-    maintainer='Your Name',
-    maintainer_email='you@example.com',
-    description='Minimal GUI + ROS2 node to control the XY plotter and publish byte stream.',
+    author='IvanNekrasov',
+    author_email='userofbgtu@gmail.com',
+    maintainer='IvanNekrasov',
+    maintainer_email='userofbgtu@gmail.com',
+    description='Minimal GUI + ROS2 node to control the OmniRevolve Plotter and publish byte stream.',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'xyplotter_ui = xyplotter_ui.xyplotter_ui_node:main',
+            'omnirevolve_ros2_ui = omnirevolve_ros2_ui.omnirevolve_ros2_ui_node:main',
         ],
     },
 )

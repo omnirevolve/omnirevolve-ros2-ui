@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>xyplotter_ui</name>
+  <name>omnirevolve_ros2_ui</name>
   <version>0.1.0</version>
-  <description>Minimal GUI + ROS2 node to control the XY plotter (Load file, Start drawing, Calibrate, Home) and publish byte stream.</description>
+  <description>Minimal GUI + ROS2 node to control the OmniRevolve Plotter (Load file, Start drawing, Calibrate, Home, etc.) and publish byte stream.</description>
 
-  <maintainer email="you@example.com">Your Name</maintainer>
+  <maintainer email="userofbgtu@gmail.com">IvanNekrasov</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
@@ -12,7 +12,7 @@
   <!-- ROS 2 runtime deps -->
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
-  <exec_depend>xyplotter_msgs</exec_depend>
+  <exec_depend>omnirevolve_ros2_messages</exec_depend>
   <!-- System GUI dep (Ubuntu/Debian). For rosdep install: -->
   <exec_depend>python3-tk</exec_depend>
 

@@ -10,7 +10,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
 from std_msgs.msg import UInt8MultiArray, UInt8, Empty
-from xyplotter_msgs.msg import PlotterTelemetry  # наше сообщение
+from omnirevolve_ros2_messages.msg import PlotterTelemetry
 
 # ------------------- Constants / Topics / QoS -------------------
 
@@ -61,7 +61,7 @@ class StreamState:
 
 class PlotterControlNode(Node):
     def __init__(self):
-        super().__init__('xyplotter_ui')
+        super().__init__('omnirevolve_ros2_ui')
 
         # publishers
         self.pub_bytes       = self.create_publisher(UInt8MultiArray, TOPIC_STREAM, QOS_RELIABLE)
@@ -85,7 +85,7 @@ class PlotterControlNode(Node):
         self.telem_calibrated = None
         self.telem_homed = None
 
-        self.get_logger().info('xyplotter_ui node ready.')
+        self.get_logger().info('omnirevolve_ros2_ui node ready.')
 
     # ---- telemetry ----
     def on_telemetry(self, msg: PlotterTelemetry):
@@ -175,7 +175,7 @@ class UI(tk.Tk):
     def __init__(self, node: PlotterControlNode):
         super().__init__()
         self.node = node
-        self.title('XY Plotter Control')
+        self.title('OmniRevolve Plotter Control')
 
         # Разрешаем ресайз
         self.resizable(True, True)
