@@ -14,7 +14,7 @@ from omnirevolve_ros2_messages.msg import PlotterTelemetry
 
 # ------------------- Constants / Topics / QoS -------------------
 
-PKT_SIZE = 1024
+PKT_SIZE = 512
 
 TOPIC_STREAM          = '/plotter/byte_stream'           # publisher -> ESP32
 TOPIC_NEED            = '/plotter/cmd/need_packets'      # ESP32 -> publisher
